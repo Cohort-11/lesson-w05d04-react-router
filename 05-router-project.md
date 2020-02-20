@@ -1,29 +1,28 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)![Misk Logo](https://i.ibb.co/KmXhJbm/Webp-net-resizeimage-1.png) 
-
-
+[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)![Misk Logo](https://i.ibb.co/KmXhJbm/Webp-net-resizeimage-1.png)
 
 # React Router Recap and Exercise
 
-
-
 ## Recap
+
 What have we learned so far?
-* Single Page Applications have specific URLs that are routed to display
+
+- Single Page Applications have specific URLs that are routed to display
   different content.
-* React Router is a third-party library that we can install and use with React.
-* Since React Router isn't built in to React, we must import its components.
-* React Router makes it easy for us to route URLs to components.
-* React Router automatically manipulates modern browser history mechanics.
+- React Router is a third-party library that we can install and use with React.
+- Since React Router isn't built in to React, we must import its components.
+- React Router makes it easy for us to route URLs to components.
+- React Router automatically manipulates modern browser history mechanics.
 
 Now let's put that to the test!
 
 ## You Do: Implement Router
 
-[STARTER CODE](https://github.com/sei-eternity/lab-w08d04-react-router-blog)
+[STARTER CODE](https://github.com/sei-entropy/lab-w05d05-react-router-blog)
 
 Let's go back to our blog project.
 
 You've been told your blog needs to have five pages:
+
 - Homepage
 - Main blog
 - Favorite movie
@@ -40,25 +39,24 @@ Task:
 
 _Fun Note:_ There's no reason you can't change the CSS, if you'd like! The CSS file that you'll change is `App.css`. If you'd like, you can grab ours below:
 
-
 <details>
   <summary>App.css</summary>
 
-  ```css
-  @import url('https://fonts.googleapis.com/css?family=Spectral:500,700');
+```css
+@import url('https://fonts.googleapis.com/css?family=Spectral:500,700');
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600i');
 
 a {
   margin: 20px 30px 0px 0px;
-  font-family: "Spectral", serif;
+  font-family: 'Spectral', serif;
   color: blue;
 }
 
 body {
   font-size: 16px;
   line-height: 1.5;
-  color: #002F2F;
-  font-family: "Raleway", sans-serif;
+  color: #002f2f;
+  font-family: 'Raleway', sans-serif;
 }
 
 li {
@@ -70,7 +68,7 @@ ol {
 }
 
 body {
-  background: #EFECCA;
+  background: #efecca;
 }
 
 h1 {
@@ -80,23 +78,22 @@ h1 {
   text-decoration: underline;
   text-align: center;
   letter-spacing: 2px;
-  font-family: "Spectral", serif;
+  font-family: 'Spectral', serif;
 }
 
 h2 {
   font-size: 24px;
   color: #046380;
   text-align: center;
-  font-family: "Spectral", serif;
+  font-family: 'Spectral', serif;
 }
 
 h3 {
   font-size: 22px;
   color: #046380;
   text-align: center;
-  font-family: "Spectral", serif;
+  font-family: 'Spectral', serif;
 }
-
 
 .App {
   text-align: center;
@@ -119,8 +116,12 @@ h3 {
 }
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 ```
 
@@ -133,22 +134,27 @@ h3 {
 
 **Hint**: You can instantiate a component with `props` inside of a `<Route>` element. An example is below:
 
-
 ```js
-<Route path="/blog" render={
-    (props) => (<Blog
-              {...props}
-              title={post.title}
-              author={post.author}
-              body={post.body}
-              comments={post.comments} />
-)}/>
+<Route
+  path="/blog"
+  render={props => (
+    <Blog
+      {...props}
+      title={post.title}
+      author={post.author}
+      body={post.body}
+      comments={post.comments}
+    />
+  )}
+/>
 ```
 
-##### A good article that discusses how to pass props to a component: 
+##### A good article that discusses how to pass props to a component:
+
 - https://tylermcginnis.com/react-router-pass-props-to-components/
 
-##### Articles about the spread operator: 
+##### Articles about the spread operator:
+
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
 - [6 great uses of the spread operator](https://davidwalsh.name/spread-operator)
 
